@@ -1,0 +1,8 @@
+# Automatic HTTPS with Let's Encrypt. Replace example.com with your domain.
+example.com {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3000 {
+		# Stream Server-Sent Events immediately.
+		flush_interval -1
+	}
+}

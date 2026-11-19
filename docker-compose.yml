@@ -1,0 +1,15 @@
+services:
+  tempmail:
+    build: .
+    image: tempmail:latest
+    container_name: tempmail
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      PORT: 3000
+      SMTP_PORT: 2525
+    ports:
+      # Public SMTP port 25 → container port 2525 (no root needed inside).
+      - "25:2525"
+      # Web UI is only exposed locally — put Caddy / nginx in front for HTTPS.
+      - "127.0.0.1:3000:3000"
