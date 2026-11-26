@@ -46,7 +46,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/smtp-server": "^3.5.13",
-    "nodemailer": "^10.6.0",
+    "nodemailer": "^10.6.1",
     "typescript": "^5.9.3",
     "vitest": "^5.1.1"
   }
